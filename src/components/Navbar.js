@@ -249,20 +249,12 @@ export default function Navbar() {
                     ))}
                   </ul>
                 </div>
-
-                <Link
-                  href="/contact"
-                  onClick={closeAll}
-                  className={`${quoteButtonClass} w-full py-3`}
-                >
-                  Get a quote
-                </Link>
               </div>
 
               <Link
                 href="/contact"
                 onClick={closeAll}
-                className={`${quoteButtonClass} hidden xl:inline-flex`}
+                className={`${quoteButtonClass} w-full py-3 xl:w-auto xl:py-2`}
               >
                 Get a quote
               </Link>
