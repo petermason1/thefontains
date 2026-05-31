@@ -76,7 +76,7 @@ const faqs = [
 
 export default function FaqPage() {
   return (
-    <div className="mx-auto w-full max-w-6xl px-6 py-20">
+    <div className="page-shell">
       <PageHeader
         title="FAQ"
         description="Answers to common booking and performance questions."
@@ -87,9 +87,9 @@ export default function FaqPage() {
         {faqs.map((item) => (
           <details
             key={item.question}
-            className="rounded-2xl border border-border-subtle bg-surface-muted p-5"
+            className="rounded-2xl border border-border-subtle bg-surface-muted p-4 sm:p-5"
           >
-            <summary className="cursor-pointer list-none text-lg font-semibold text-zinc-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950 [&::-webkit-details-marker]:hidden">
+            <summary className="cursor-pointer list-none break-words text-base font-semibold text-zinc-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950 sm:text-lg [&::-webkit-details-marker]:hidden">
               {item.question}
             </summary>
             <p className="mt-3 text-zinc-300">{item.answer}</p>

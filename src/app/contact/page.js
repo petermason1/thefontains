@@ -8,7 +8,7 @@ export const metadata = {
 
 export default function ContactPage() {
   return (
-    <div className="mx-auto w-full max-w-6xl px-6 py-20">
+    <div className="page-shell">
       <PageHeader
         title="Contact us"
         description="For bookings, press, or general enquiries, send a message and we will get back to you as soon as possible."
@@ -29,7 +29,7 @@ export default function ContactPage() {
               <span className="font-semibold text-zinc-200">Email:</span>{" "}
               <a
                 href="mailto:thefontains@hotmail.co.uk"
-                className="text-white underline-offset-4 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40"
+                className="break-all text-white underline-offset-4 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40"
               >
                 thefontains@hotmail.co.uk
               </a>

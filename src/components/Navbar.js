@@ -31,14 +31,14 @@ function NavLink({ href, active, onNavigate, children }) {
     <Link
       href={href}
       onClick={onNavigate}
-      className={`relative block whitespace-nowrap rounded-lg px-2.5 py-2.5 text-sm font-medium transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/35 focus-visible:ring-offset-2 focus-visible:ring-offset-black lg:py-2 xl:px-3 ${
+      className={`relative block whitespace-nowrap rounded-lg px-2.5 py-2.5 text-sm font-medium transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/35 focus-visible:ring-offset-2 focus-visible:ring-offset-black xl:py-2 xl:px-3 ${
         active ? "text-white" : "text-zinc-400 hover:text-zinc-100"
       }`}
     >
       {children}
       {active ? (
         <span
-          className="pointer-events-none absolute inset-x-2 bottom-1.5 h-0.5 rounded-full bg-white/90 lg:bottom-1"
+          className="pointer-events-none absolute inset-x-2 bottom-1.5 h-0.5 rounded-full bg-white/90 xl:bottom-1"
           aria-hidden
         />
       ) : null}
@@ -88,12 +88,12 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-white/[0.08] bg-black/80 backdrop-blur-xl backdrop-saturate-150">
       <div className="mx-auto w-full max-w-6xl px-4 sm:px-6">
-        <div className="relative flex items-center justify-between gap-4 py-3 lg:gap-6 lg:py-3">
-          <div className="flex min-w-0 flex-1 items-center justify-between gap-4 lg:flex-initial">
+        <div className="relative flex items-center justify-between gap-4 py-3 xl:gap-6 xl:py-3">
+          <div className="flex min-w-0 flex-1 items-center justify-between gap-4 xl:flex-initial">
             <Link
               href="/"
               onClick={closeAll}
-              className="group flex min-w-0 flex-1 items-center gap-3 rounded-xl py-0.5 outline-none transition hover:opacity-95 focus-visible:ring-2 focus-visible:ring-white/35 focus-visible:ring-offset-2 focus-visible:ring-offset-black lg:flex-initial"
+              className="group flex min-w-0 flex-1 items-center gap-3 rounded-xl py-0.5 outline-none transition hover:opacity-95 focus-visible:ring-2 focus-visible:ring-white/35 focus-visible:ring-offset-2 focus-visible:ring-offset-black xl:flex-initial"
               aria-label="The Fontains — home"
             >
               <span className="relative shrink-0 overflow-hidden rounded-full border border-white/15 bg-zinc-900 shadow-[0_0_0_1px_rgba(255,255,255,0.06)] ring-1 ring-black/40 transition group-hover:border-white/25">
@@ -111,7 +111,7 @@ export default function Navbar() {
                 <span className="block truncate font-semibold tracking-tight text-white">
                   The Fontains
                 </span>
-                <span className="mt-0.5 hidden text-xs font-medium text-accent/75 sm:block lg:hidden xl:block">
+                <span className="mt-0.5 hidden text-xs font-medium text-accent/75 sm:block xl:hidden 2xl:block">
                   Wedding &amp; function band
                 </span>
               </span>
@@ -122,7 +122,7 @@ export default function Navbar() {
               aria-label={isMenuOpen ? "Close menu" : "Open menu"}
               aria-expanded={isMenuOpen}
               aria-controls="main-navigation"
-              className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-white/15 text-zinc-200 transition hover:border-white/25 hover:bg-white/5 lg:hidden"
+              className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-white/15 text-zinc-200 transition hover:border-white/25 hover:bg-white/5 xl:hidden"
               onClick={() => setIsMenuOpen((prev) => !prev)}
             >
               <span className="sr-only">Menu</span>
@@ -153,10 +153,10 @@ export default function Navbar() {
               isMenuOpen
                 ? "absolute inset-x-0 top-full block border-t border-white/[0.08] bg-black/95 px-4 pb-5 pt-4 backdrop-blur-xl sm:px-6"
                 : "hidden"
-            } lg:static lg:flex lg:min-w-0 lg:flex-1 lg:items-center lg:justify-end lg:gap-3 lg:border-0 lg:bg-transparent lg:px-0 lg:pb-0 lg:pt-0`}
+            } xl:static xl:flex xl:min-w-0 xl:flex-1 xl:items-center xl:justify-end xl:gap-3 xl:border-0 xl:bg-transparent xl:px-0 xl:pb-0 xl:pt-0`}
           >
-            <div className="flex flex-col gap-5 lg:flex-row lg:flex-nowrap lg:items-center lg:justify-end lg:gap-3">
-              <ul className="flex flex-col gap-0.5 lg:flex-row lg:flex-nowrap lg:items-center lg:gap-0.5">
+            <div className="flex flex-col gap-5 xl:flex-row xl:flex-nowrap xl:items-center xl:justify-end xl:gap-3">
+              <ul className="flex flex-col gap-0.5 xl:flex-row xl:flex-nowrap xl:items-center xl:gap-0.5">
                 {primaryNav.map((link) => (
                   <li key={link.href} className="shrink-0">
                     <NavLink
@@ -171,7 +171,7 @@ export default function Navbar() {
 
                 <li
                   ref={moreWrapRef}
-                  className="relative hidden shrink-0 lg:block"
+                  className="relative hidden shrink-0 xl:block"
                 >
                   <button
                     type="button"
@@ -180,7 +180,7 @@ export default function Navbar() {
                     aria-controls="more-nav-panel"
                     id="more-nav-button"
                     onClick={() => setMoreOpen((v) => !v)}
-                    className={`flex w-full items-center gap-1.5 whitespace-nowrap rounded-lg px-2.5 py-2 text-left text-sm font-medium transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/35 focus-visible:ring-offset-2 focus-visible:ring-offset-black lg:inline-flex lg:w-auto lg:justify-center lg:py-2 xl:px-3 ${
+                    className={`flex w-full items-center gap-1.5 whitespace-nowrap rounded-lg px-2.5 py-2 text-left text-sm font-medium transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/35 focus-visible:ring-offset-2 focus-visible:ring-offset-black xl:inline-flex xl:w-auto xl:justify-center xl:py-2 xl:px-3 ${
                       moreActive || moreOpen
                         ? "text-white"
                         : "text-zinc-400 hover:text-zinc-100"
@@ -230,7 +230,7 @@ export default function Navbar() {
                 </li>
               </ul>
 
-              <div className="flex flex-col gap-4 lg:hidden">
+              <div className="flex flex-col gap-4 xl:hidden">
                 <div>
                   <p className="mb-2 text-xs font-semibold uppercase tracking-[0.15em] text-zinc-500">
                     Also on this site
@@ -262,7 +262,7 @@ export default function Navbar() {
               <Link
                 href="/contact"
                 onClick={closeAll}
-                className={`${quoteButtonClass} hidden lg:inline-flex`}
+                className={`${quoteButtonClass} hidden xl:inline-flex`}
               >
                 Get a quote
               </Link>

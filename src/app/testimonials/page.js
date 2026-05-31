@@ -8,7 +8,7 @@ export const metadata = {
 
 export default function TestimonialsPage() {
   return (
-    <div className="mx-auto w-full max-w-6xl px-6 py-20">
+    <div className="page-shell">
       <PageHeader
         title="Testimonials"
         description="Feedback from venues, organisers, and audiences."
@@ -19,10 +19,14 @@ export default function TestimonialsPage() {
         {testimonials.map((item) => (
           <article
             key={`${item.source}-${item.quote.slice(0, 32)}`}
-            className="rounded-2xl border border-border-subtle bg-surface-muted p-6"
+            className="rounded-2xl border border-border-subtle bg-surface-muted p-4 sm:p-6"
           >
-            <blockquote className="text-zinc-200">&quot;{item.quote}&quot;</blockquote>
-            <p className="mt-4 text-sm font-semibold text-subtle">{item.source}</p>
+            <blockquote className="text-base leading-relaxed text-zinc-200 sm:text-lg">
+              &quot;{item.quote}&quot;
+            </blockquote>
+            <p className="mt-4 break-words text-sm font-semibold text-subtle">
+              {item.source}
+            </p>
           </article>
         ))}
       </section>

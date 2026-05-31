@@ -57,14 +57,14 @@ export default function Home() {
   return (
     <>
       <HomeHero slides={homeSlides}>
-        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent drop-shadow-md">
+        <p className="text-xs font-semibold uppercase tracking-[0.12em] text-accent drop-shadow-md sm:text-sm sm:tracking-[0.2em]">
           North East wedding &amp; function band
         </p>
         <h1 className="mt-4 max-w-3xl text-[clamp(2rem,5vw,3.75rem)] font-extrabold leading-[1.08] tracking-tight text-white drop-shadow-lg">
           Live music that fills the floor — weddings, parties, and events across
           the North East
         </h1>
-        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-zinc-300 drop-shadow-md">
+        <p className="mt-6 max-w-2xl text-base leading-relaxed text-zinc-300 drop-shadow-md sm:text-lg">
           The Fontains are a professional three-piece with a big sound, PAT-tested
           kit, full PLI, and an optional DJ service so your whole evening is covered
           in one booking.
@@ -96,7 +96,7 @@ export default function Home() {
         </div>
       </HomeHero>
 
-      <div className="mx-auto w-full max-w-6xl px-6 py-12 sm:py-16 lg:py-20">
+      <div className="page-shell">
         <Reveal className="block">
           <TestimonialCarousel items={featuredTestimonials} />
         </Reveal>

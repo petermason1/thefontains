@@ -9,7 +9,7 @@ export const metadata = {
 
 export default function FunctionsPage() {
   return (
-    <div className="mx-auto w-full max-w-6xl space-y-10 px-6 py-20">
+    <div className="page-shell space-y-8 sm:space-y-10">
       <PageHeader
         eyebrow="The Fontains"
         title="Functions"
@@ -48,9 +48,9 @@ export default function FunctionsPage() {
 
       <section
         id="wedding"
-        className="scroll-mt-28 rounded-2xl border border-border-subtle bg-white p-6 text-zinc-900 sm:p-8"
+        className="scroll-mt-[4.5rem] rounded-2xl border border-border-subtle bg-white p-5 text-zinc-900 sm:scroll-mt-24 sm:p-8 lg:scroll-mt-28"
       >
-        <h2 className="text-2xl font-semibold tracking-tight text-zinc-900 sm:text-3xl">
+        <h2 className="text-xl font-semibold tracking-tight text-zinc-900 sm:text-2xl lg:text-3xl">
           Wedding
         </h2>
         <div className="mt-5 space-y-4 text-zinc-700 leading-relaxed">
@@ -85,9 +85,9 @@ export default function FunctionsPage() {
 
       <section
         id="corporate"
-        className="scroll-mt-28 rounded-2xl border border-border-subtle bg-surface-muted p-6 sm:p-8"
+        className="scroll-mt-[4.5rem] rounded-2xl border border-border-subtle bg-surface-muted p-5 sm:scroll-mt-24 sm:p-8 lg:scroll-mt-28"
       >
-        <h2 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">
+        <h2 className="text-xl font-semibold tracking-tight text-white sm:text-2xl lg:text-3xl">
           Corporate
         </h2>
         <div className="mt-5 space-y-4 text-zinc-300 leading-relaxed">
@@ -129,9 +129,9 @@ export default function FunctionsPage() {
 
       <section
         id="christmas"
-        className="scroll-mt-28 rounded-2xl border border-border-subtle bg-white p-6 text-zinc-900 sm:p-8"
+        className="scroll-mt-[4.5rem] rounded-2xl border border-border-subtle bg-white p-5 text-zinc-900 sm:scroll-mt-24 sm:p-8 lg:scroll-mt-28"
       >
-        <h2 className="text-2xl font-semibold tracking-tight text-zinc-900 sm:text-3xl">
+        <h2 className="text-xl font-semibold tracking-tight text-zinc-900 sm:text-2xl lg:text-3xl">
           Christmas
         </h2>
         <div className="mt-5 space-y-4 text-zinc-700 leading-relaxed">
@@ -168,9 +168,9 @@ export default function FunctionsPage() {
 
       <section
         id="pub-club"
-        className="scroll-mt-28 rounded-2xl border border-border-subtle bg-surface-muted p-6 sm:p-8"
+        className="scroll-mt-[4.5rem] rounded-2xl border border-border-subtle bg-surface-muted p-5 sm:scroll-mt-24 sm:p-8 lg:scroll-mt-28"
       >
-        <h2 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">
+        <h2 className="text-xl font-semibold tracking-tight text-white sm:text-2xl lg:text-3xl">
           Pub / Club
         </h2>
         <div className="mt-5 space-y-4 text-zinc-300 leading-relaxed">

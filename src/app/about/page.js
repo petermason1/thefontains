@@ -26,7 +26,7 @@ export default function AboutPage() {
   const corporateClients = ["NHS", "Sage", "RAF", "British Army"];
 
   return (
-    <div className="mx-auto w-full max-w-6xl space-y-12 px-6 py-16 sm:space-y-14 sm:py-20">
+    <div className="page-shell space-y-10 sm:space-y-12 lg:space-y-14">
       <Reveal>
         <PageHeader
           eyebrow="About"
@@ -73,7 +73,7 @@ export default function AboutPage() {
       <Reveal className="block">
         <section
           aria-label="At a glance"
-          className="grid gap-4 sm:grid-cols-3"
+          className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
         >
           <article className="rounded-2xl border border-border-subtle bg-surface-elevated p-6 transition hover:border-accent/20">
             <p className="text-4xl font-extrabold tracking-tight text-accent tabular-nums">

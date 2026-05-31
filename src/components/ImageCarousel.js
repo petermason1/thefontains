@@ -69,9 +69,9 @@ export default function ImageCarousel({
       </div>
 
       <div
-        className={`mt-4 flex gap-4 ${multiple ? "items-center justify-between" : ""}`}
+        className={`mt-4 flex gap-3 ${multiple ? "flex-col sm:flex-row sm:items-center sm:justify-between" : ""}`}
       >
-        <p className="text-sm text-subtle">{activeSlide.caption}</p>
+        <p className="min-w-0 text-sm text-subtle">{activeSlide.caption}</p>
         {multiple ? (
           <div className="flex shrink-0 gap-2" role="tablist" aria-label="Carousel slides">
             {slides.map((slide, index) => (

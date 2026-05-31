@@ -11,7 +11,7 @@ export default function HomeHero({ slides, children }) {
   return (
     <section
       aria-label="Introduction"
-      className="relative isolate min-h-[min(78dvh,820px)] w-full overflow-hidden"
+      className="relative isolate min-h-[min(70dvh,820px)] w-full overflow-hidden sm:min-h-[min(78dvh,820px)]"
     >
       <div className="absolute inset-0 z-0">
         <Image
@@ -34,7 +34,7 @@ export default function HomeHero({ slides, children }) {
         aria-hidden
       />
 
-      <div className="relative z-10 mx-auto flex min-h-[min(78dvh,820px)] w-full max-w-6xl flex-col justify-end px-6 pb-12 pt-28 sm:pb-14 sm:pt-36">
+      <div className="relative z-10 mx-auto flex min-h-[min(70dvh,820px)] w-full max-w-6xl flex-col justify-end px-4 pb-10 pt-24 sm:min-h-[min(78dvh,820px)] sm:px-6 sm:pb-14 sm:pt-32 lg:pt-36">
         <div>{children}</div>
         {!multiple ? (
           <p className="mt-6 text-sm leading-snug text-zinc-400">

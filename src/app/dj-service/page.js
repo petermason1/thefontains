@@ -9,7 +9,7 @@ export const metadata = {
 
 export default function DjServicePage() {
   return (
-    <div className="mx-auto w-full max-w-6xl space-y-10 px-6 py-20">
+    <div className="page-shell space-y-8 sm:space-y-10">
       <PageHeader eyebrow="The Fontains" title="DJ Service">
         <p className="mt-6 max-w-4xl text-lg leading-relaxed text-subtle">
           The Fontains offer a DJ service that can be booked as a standalone
@@ -20,7 +20,7 @@ export default function DjServicePage() {
         </p>
       </PageHeader>
 
-      <section className="rounded-2xl border border-border-subtle bg-white p-6 text-zinc-900 sm:p-8">
+      <section className="rounded-2xl border border-border-subtle bg-white p-5 text-zinc-900 sm:p-8">
         <div className="max-w-4xl space-y-4 text-zinc-700 leading-relaxed">
           <p>
             Drawing on their love of music, the guys are able to play a great set
@@ -32,8 +32,8 @@ export default function DjServicePage() {
         </div>
       </section>
 
-      <section className="rounded-2xl border border-border-subtle bg-surface-muted p-6 sm:p-8">
-        <h2 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">
+      <section className="rounded-2xl border border-border-subtle bg-surface-muted p-5 sm:p-8">
+        <h2 className="text-xl font-semibold tracking-tight text-white sm:text-2xl lg:text-3xl">
           Think you can do a better job?
         </h2>
         <p className="mt-4 max-w-4xl text-zinc-300 leading-relaxed">
@@ -44,7 +44,7 @@ export default function DjServicePage() {
         </p>
       </section>
 
-      <section className="rounded-2xl border border-border-subtle bg-white p-6 text-zinc-900 sm:p-8">
+      <section className="rounded-2xl border border-border-subtle bg-white p-5 text-zinc-900 sm:p-8">
         <p className="max-w-4xl text-zinc-700 leading-relaxed">
           As with all their events, the band are happy to liaise with you and the
           venue to make sure your event runs seamlessly from the moment they begin

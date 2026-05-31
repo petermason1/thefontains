@@ -14,7 +14,7 @@ const videos = [
 
 export default function VideosPage() {
   return (
-    <div className="mx-auto w-full max-w-6xl px-6 py-20">
+    <div className="page-shell">
       <PageHeader
         title="Videos"
         description="Music videos, live sessions, and behind-the-scenes content."

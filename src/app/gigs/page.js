@@ -23,7 +23,7 @@ function formatGigDate(iso) {
 
 export default function GigsPage() {
   return (
-    <div className="mx-auto w-full max-w-6xl px-6 py-20">
+    <div className="page-shell">
       <PageHeader
         title="Gigs"
         description="Live dates and ticket updates. Come see us before you book."
@@ -36,7 +36,7 @@ export default function GigsPage() {
             <p className="text-sm font-semibold uppercase tracking-wide text-subtle">
               {formatGigDate(gig.date)}
             </p>
-            <h2 className="mt-2 text-xl font-semibold text-white">{gig.venue}</h2>
+            <h2 className="mt-2 break-words text-xl font-semibold text-white">{gig.venue}</h2>
             <p className="text-subtle">{gig.city}</p>
             {gig.notes ? (
               <p className="mt-3 text-sm text-subtle">{gig.notes}</p>

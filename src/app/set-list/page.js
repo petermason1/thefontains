@@ -129,7 +129,7 @@ const setListSections = [
 
 export default function SetListPage() {
   return (
-    <div className="mx-auto w-full max-w-6xl px-6 py-20">
+    <div className="page-shell">
       <PageHeader title="Set List" padding="compact">
         <h2 className="mt-3 text-xl font-semibold tracking-tight text-zinc-200 sm:text-2xl">
           Tried &amp; Tested Dancefloor Fillers
@@ -147,9 +147,9 @@ export default function SetListPage() {
         {setListSections.map((section) => (
           <article
             key={section.title}
-            className="rounded-2xl border border-border-subtle bg-surface-muted p-6"
+            className="rounded-2xl border border-border-subtle bg-surface-muted p-4 sm:p-6"
           >
-            <h3 className="text-2xl font-semibold text-white">{section.title}</h3>
+            <h3 className="text-xl font-semibold text-white sm:text-2xl">{section.title}</h3>
             <ul className="mt-5 grid gap-2 sm:grid-cols-2">
               {section.songs.map((song) => (
                 <li

@@ -16,7 +16,7 @@ const photos = [
 
 export default function PhotosPage() {
   return (
-    <div className="mx-auto w-full max-w-6xl px-6 py-20">
+    <div className="page-shell">
       <PageHeader
         title="Photos"
         description="Gallery section for band photos, live shots, and promo images."
