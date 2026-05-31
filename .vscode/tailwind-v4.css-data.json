@@ -1,0 +1,75 @@
+{
+  "version": 1.1,
+  "atDirectives": [
+    {
+      "name": "@theme",
+      "description": "Tailwind CSS v4: define design tokens (colors, fonts, breakpoints) for utilities.",
+      "references": [
+        {
+          "name": "Tailwind: Theme variables",
+          "url": "https://tailwindcss.com/docs/theme"
+        }
+      ]
+    },
+    {
+      "name": "@plugin",
+      "description": "Tailwind CSS v4: load a Tailwind plugin.",
+      "references": [
+        {
+          "name": "Tailwind: Functions and directives",
+          "url": "https://tailwindcss.com/docs/functions-and-directives#plugin-directive"
+        }
+      ]
+    },
+    {
+      "name": "@utility",
+      "description": "Tailwind CSS v4: define a custom utility class.",
+      "references": [
+        {
+          "name": "Tailwind: Adding custom utilities",
+          "url": "https://tailwindcss.com/docs/adding-custom-styles#adding-custom-utilities"
+        }
+      ]
+    },
+    {
+      "name": "@variant",
+      "description": "Tailwind CSS v4: apply a variant when defining custom CSS.",
+      "references": [
+        {
+          "name": "Tailwind: Functions and directives",
+          "url": "https://tailwindcss.com/docs/functions-and-directives#variant-directive"
+        }
+      ]
+    },
+    {
+      "name": "@custom-variant",
+      "description": "Tailwind CSS v4: define a custom variant.",
+      "references": [
+        {
+          "name": "Tailwind: Custom variants",
+          "url": "https://tailwindcss.com/docs/adding-custom-styles#custom-variant-syntax"
+        }
+      ]
+    },
+    {
+      "name": "@source",
+      "description": "Tailwind CSS v4: specify source paths for class detection.",
+      "references": [
+        {
+          "name": "Tailwind: Detecting classes in source files",
+          "url": "https://tailwindcss.com/docs/detecting-classes-in-source-files"
+        }
+      ]
+    },
+    {
+      "name": "@reference",
+      "description": "Tailwind CSS v4: import theme/config without duplicating CSS output.",
+      "references": [
+        {
+          "name": "Tailwind: Compatibility",
+          "url": "https://tailwindcss.com/docs/compatibility"
+        }
+      ]
+    }
+  ]
+}

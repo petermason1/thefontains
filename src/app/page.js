@@ -1,65 +1,169 @@
-import Image from "next/image";
+import Link from "next/link";
+import HomeHero from "@/components/HomeHero";
+import Reveal from "@/components/Reveal";
+import TestimonialCarousel from "@/components/TestimonialCarousel";
+import { testimonials } from "@/data/testimonials";
+
+const BOOKING_PHONE = "+447545615742";
+const BOOKING_PHONE_DISPLAY = "07545 615742";
+
+const pillClass =
+  "rounded-full border border-white/25 bg-black/40 px-4 py-2 text-xs font-medium text-zinc-100 backdrop-blur-md transition hover:border-accent/45 hover:bg-black/55 sm:text-sm";
 
 export default function Home() {
+  const homeSlides = [
+    {
+      src: "/Slider-Kit.jpg",
+      alt: "The Fontains live — promotional photo",
+      caption: "The Fontains — live on stage",
+    },
+  ];
+
+  const featuredTestimonials = testimonials.slice(0, 8);
+
+  const serviceCards = [
+    {
+      href: "/about",
+      title: "About",
+      body: "Meet Phil, Peter & Anthony — experience, venues, and what to expect.",
+    },
+    {
+      href: "/functions",
+      title: "Functions",
+      body: "Weddings, corporate nights, Christmas parties, and pub & club bookings.",
+    },
+    {
+      href: "/dj-service",
+      title: "DJ Service",
+      body: "Standalone DJ or after the live set — same pro sound and lighting.",
+    },
+    {
+      href: "/gigs",
+      title: "Gigs",
+      body: "See where we are playing next and come watch us live.",
+    },
+    {
+      href: "/set-list",
+      title: "Set List",
+      body: "Tried-and-tested dancefloor fillers across decades and genres.",
+    },
+    {
+      href: "/testimonials",
+      title: "Testimonials",
+      body: "Read what couples, venues, and clients say about the band.",
+    },
+  ];
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.js file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <>
+      <HomeHero slides={homeSlides}>
+        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent drop-shadow-md">
+          North East wedding &amp; function band
+        </p>
+        <h1 className="mt-4 max-w-3xl text-[clamp(2rem,5vw,3.75rem)] font-extrabold leading-[1.08] tracking-tight text-white drop-shadow-lg">
+          Live music that fills the floor — weddings, parties, and events across
+          the North East
+        </h1>
+        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-zinc-300 drop-shadow-md">
+          The Fontains are a professional three-piece with a big sound, PAT-tested
+          kit, full PLI, and an optional DJ service so your whole evening is covered
+          in one booking.
+        </p>
+        <div className="mt-8 flex flex-wrap gap-3">
+          <Link
+            href="/contact"
+            className="inline-flex rounded-full bg-accent px-6 py-3 text-sm font-semibold text-accent-foreground shadow-[0_0_24px_-4px_rgba(201,168,76,0.45)] transition hover:bg-accent/88 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-black"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            Get a quote
+          </Link>
+          <Link
+            href="/gigs"
+            className="inline-flex rounded-full border border-accent/45 bg-black/30 px-6 py-3 text-sm font-semibold text-white backdrop-blur-sm transition hover:border-accent/65 hover:bg-accent/15 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
           >
-            Documentation
-          </a>
+            See us live
+          </Link>
         </div>
-      </main>
-    </div>
+        <div className="mt-8 flex flex-wrap gap-2">
+          <Link href="/faq" className={pillClass}>
+            PAT tested · PLI insured
+          </Link>
+          <Link href="/functions" className={pillClass}>
+            3-piece · big live sound
+          </Link>
+          <Link href="/dj-service" className={pillClass}>
+            DJ add-on available
+          </Link>
+        </div>
+      </HomeHero>
+
+      <div className="mx-auto w-full max-w-6xl px-6 py-12 sm:py-16 lg:py-20">
+        <Reveal className="block">
+          <TestimonialCarousel items={featuredTestimonials} />
+        </Reveal>
+
+        <Reveal className="block">
+          <section className="mt-16 lg:mt-20">
+            <h2 className="text-lg font-semibold tracking-tight text-accent">
+              Explore
+            </h2>
+            <ul className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {serviceCards.map((card) => (
+                <li key={card.href}>
+                  <Link
+                    href={card.href}
+                    className="group flex h-full flex-col rounded-2xl border border-border-subtle bg-surface-elevated p-6 shadow-black/20 transition duration-300 ease-out hover:-translate-y-1 hover:border-accent/25 hover:bg-surface-panel hover:shadow-[0_24px_48px_-16px_rgba(0,0,0,0.55)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/50 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+                  >
+                    <span className="text-lg font-semibold text-white">
+                      {card.title}
+                    </span>
+                    <span className="mt-2 flex-1 text-sm leading-relaxed text-subtle">
+                      {card.body}
+                    </span>
+                    <span className="mt-4 text-sm font-semibold text-white underline decoration-accent/50 underline-offset-2 transition group-hover:text-accent group-hover:decoration-accent">
+                      View
+                    </span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+        </Reveal>
+
+        <Reveal className="block">
+          <section
+            aria-label="Book the band"
+            className="mt-16 rounded-2xl border border-border-subtle bg-surface-panel px-6 py-10 text-center sm:px-10 lg:mt-20"
+          >
+            <h2 className="text-xl font-semibold text-white sm:text-2xl">
+              Ready to check dates or get a price?
+            </h2>
+            <p className="mx-auto mt-3 max-w-xl text-sm text-subtle sm:text-base">
+              Call{" "}
+              <a
+                href={`tel:${BOOKING_PHONE}`}
+                className="font-semibold text-accent underline decoration-accent/40 underline-offset-2 hover:text-accent/90"
+              >
+                {BOOKING_PHONE_DISPLAY}
+              </a>{" "}
+              (Anth) or send your event details — we&apos;ll come back to you quickly.
+            </p>
+            <div className="mt-6 flex flex-wrap justify-center gap-3">
+              <Link
+                href="/contact"
+                className="inline-flex rounded-full bg-accent px-6 py-3 text-sm font-semibold text-accent-foreground shadow-[0_0_24px_-4px_rgba(201,168,76,0.35)] transition hover:bg-accent/88 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950"
+              >
+                Contact us
+              </Link>
+              <Link
+                href="/faq"
+                className="inline-flex rounded-full border border-accent/35 px-6 py-3 text-sm font-semibold text-white transition hover:border-accent/55 hover:bg-accent/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950"
+              >
+                FAQ
+              </Link>
+            </div>
+          </section>
+        </Reveal>
+      </div>
+    </>
   );
 }
